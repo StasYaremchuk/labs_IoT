@@ -1,14 +1,14 @@
 class Plane:
-    def __init__(self, V=None, name=None, people=None, wingspan=None, pas_or_cargo=None):
-        self.__V = V
+    def __init__(self, fuel_capacity=None, name=None, people=None, wingspan=None, pas_or_cargo=None):
+        self.__fuel_capacity = fuel_capacity
         self.__name = name
         self.__people = people
         self.wingspan = wingspan
         self.pas_or_cargo = pas_or_cargo
 
 
-    def get_V(self):
-        return self.__V
+    def get_fuel_capacity(self):
+        return self.__fuel_capacity
 
     def get_name(self):
         return self.__name
@@ -19,12 +19,12 @@ class Plane:
 
     def __str__(self):
         return (f'\nНазва: "{self.__name}"'
-                f'\nОб\'єм бака: {self.__V}'
+                f'\nОб\'єм бака: {self.__fuel_capacity}'
                 f'\nКількість людей: {self.__people}')
 
     def __repr__(self):
         return (f'\nНазва: "{self.__name}"\n'
-                f'Об\'єм бака: {self.__V}\n'
+                f'Об\'єм бака: {self.__fuel_capacity}\n'
                 f'Кількість людей: {self.__people}\n'
                 f'Розмах Крила: {self.wingspan}\n'
                 f'Тип: {self.pas_or_cargo}')
